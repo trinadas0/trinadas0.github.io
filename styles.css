@@ -1,0 +1,482 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;800&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+
+/* General Styling */
+body {
+  background-color: black;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  user-drag: none;
+  user-select: none;
+  color: white;
+  box-sizing: border-box;
+}
+
+section {
+  overflow: hidden;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.blob {
+  height: 20vmax;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to right, #de00aa, #ffd085);
+  z-index: -100;
+}
+
+.background {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  user-drag: none;
+  user-select: none;
+}
+
+/* Home Section Styling */
+.home {
+  background-color: rgba(0, 0, 0, 0.1);
+  position: relative;
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
+  z-index: 2;
+  backdrop-filter: blur(3vmax);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.home p, .home h1, .home h2, .home button {
+  margin: 4vh;
+}
+
+.subheader, .subheader h2, .subheader h3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  padding: 0;
+  margin: 0;
+}
+
+.home h1 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 800;
+  font-size: 10vmax;
+  letter-spacing: 0.5vmax;
+  color: rgba(255, 255, 255, 0.1);
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: white;
+}
+
+.home h2 {
+  color: white;
+  font-weight: 400;
+  font-size: 2vmax;
+  letter-spacing: 0.1vmax;
+  font-family: 'Poppins', sans-serif;
+}
+
+.home h3 {
+  color: white;
+  font-weight: 400;
+  font-size: 3vmax;
+  letter-spacing: 0.1vmax;
+  font-family: 'Pinyon Script', cursive;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
+
+.home button {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: white solid 1.5px;
+  color: white;
+  padding: 15px 32px;
+  margin: 1vh;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2.5vmax;
+  font-family: 'Pinyon Script', cursive;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+
+.home button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: white solid 1.5px;
+  color: white;
+  transform: translateY(-3px);
+  transition: 0.5s;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* About Section Styling */
+.about {
+  z-index: 3;
+  position: relative;
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+#slider {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 3vmax;
+  font-family: 'Pinyon Script', cursive;
+}
+
+#sliderValue {
+  max-width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #de00aa;
+  font-size: 8vmax;
+  padding: 0;
+  margin-left: 0;
+}
+
+/* Animations */
+.start {
+  opacity: 0;
+}
+
+.animation {
+  animation: fade 0.3s forwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.holder-animation {
+  animation: holder 4s;
+}
+
+@keyframes holder {
+  0% {
+    opacity: 1;
+  }
+
+  95% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* About Section Styling (Continued) */
+.about p {
+  font-size: 1.5vmax;
+}
+
+.about h1, .projects h1 {
+  margin: 0;
+  padding-left: 0;
+  font-family: 'Archivo', sans-serif;
+  color: white;
+  font-weight: 800;
+  font-size: 6vmax;
+  letter-spacing: 0.5vmax;
+  text-align: left;
+  padding: 2vmax;
+}
+
+.about h2, .projects h2 {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 2vmax;
+  letter-spacing: 0.2vmax;
+}
+
+.about-txt h2 {
+  max-width: 50vw;
+  text-align: center;
+}
+
+.projects h3 {
+  margin:0;
+  padding:0;
+  color: white;
+  font-weight: 400;
+  font-size: 7vmax;
+  font-family: 'Pinyon Script', cursive;
+  text-align:left;
+  color: #de00aa;
+  transform: scale(1);
+  transition: color 0.5s ease-in-out, text-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.projects h4 {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 1.5vmax;
+  letter-spacing: 0.2vmax;
+}
+
+.projects h6 {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 1vmax;
+  font-weight: 400;
+  margin-top: 1.25vmax;
+  letter-spacing: 0.2vmax;
+  font-family: 'Archivo', sans-serif;
+  color: white;
+  text-align: left;
+  font-style:italic;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: auto;
+  text-align: center;
+}
+
+.skills-wrapper {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  max-height: 100vh;
+  width: 40vw;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.hard-skills, .soft-skills {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.hard-skills p, .soft-skills p {
+  margin: 0.5em;
+  font-size: 1vmax;
+  border: white solid 0.2em;
+  padding: 1em;
+  border-radius: 2em;
+}
+
+.hard-skills p:hover, .soft-skills p:hover {
+  color: #de00aa;
+  border: #de00aa solid 0.2em;
+  box-shadow: 0 0 10px rgba(222, 0, 170, 0.7);
+  text-shadow: 0 0 10px #de00aa;
+  transition: box-shadow 0.1s ease-in-out, text-shadow 0.1s ease-in-out;
+}
+
+.about-txt {
+  max-width: 40vw;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.highlight {
+  color: #de00aa;
+}
+
+/* Projects Section Styling */
+.projects {
+  color: white;
+  margin: 0;
+  position: relative;
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
+  background-color: black;
+  box-sizing: border-box;
+  text-align:left;
+  box-sizing: border-box;
+}
+
+
+.preview {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 60vmin;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease-out; 
+  margin:1vmax;
+}
+
+.preview:hover{
+  transform: scale(1.02);
+  transition: 0.3s ease-in-out;
+}
+
+
+.preview-txt {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: left;
+  justify-content: center;
+  max-width: 50vw;
+  height:50vh;
+  margin:2vmax;
+}
+
+.preview-txt h3:hover{
+  color: #de00aa;
+  text-shadow: 0 0 10px #de00aa;
+  transform: scale(1.02);
+  transition: 0.3s ease-in-out;
+}
+
+
+.sundae {
+  height: 80vh;
+  width: 100vw;
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+
+/* Navigation Styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: white solid 1.5px;
+  color: white;
+  font-size: 2em;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  cursor: pointer;
+  line-height: 1; 
+}
+
+.nav-button:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.popup-menu {
+  text-align: center;
+  display: none;
+  position: absolute;
+  top: 5.5em;
+  right: 5.5em;
+  background-color: black;
+  border: white solid 1.5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.popup-menu a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  font-weight: 800;
+  display: block;
+  padding: 0.5em;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.popup-menu a:hover {
+  color: #de00aa;
+}
+
+@media only screen and (max-width: 950px) {
+  #slider {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .preview-txt {
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 80vw;
+    margin:2vmax;
+  }
+
+  .projects h1 {
+    text-align: center;
+  }
+
+  .sundae {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about {
+    padding: 0;
+  }
+}

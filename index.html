@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;800&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>    
+  <nav class="navbar">
+    <button id="navButton" class="nav-button">&#9776;</button>
+    <div id="popupMenu" class="popup-menu">
+      <!-- Add your menu items here -->
+      <a href="#home">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#projects">PROJECTS</a>
+    </div>
+  </nav>
+
+  <div class="background">
+    <section class="home" id="home">
+      <div class="header">
+        <div class = "subheader">
+          <h2>Hiya! I'm </h2>
+          <h3> Trina.</h3>
+          <h2>Welcome to my portfolio</h2>
+        </div>
+        <h1>WHERE CODE MEETS ART</h1> 
+        <h2>*made with pure HTML, CSS, and JavaScript</h2>
+        <button onclick="scrollToSection('about')" type="button" class="button">Look around!</button>
+      </div>
+    </section>
+    <div class="blob"></div>
+  </div>
+  
+  <section class="about" id="about">
+    <div id="slider">
+      <h1>TRINA IS A</h1>
+      <div id="sliderValue"></div>
+    </div>
+    <div class="about-content"> 
+      <div class="skills-wrapper">
+        <div class ="hard-skills-wrapper">
+            <h2>Hard Skills:</h2>
+            <div class="hard-skills">
+              <p>Java</p> <p>C</p> <p>Python</p> <p>HTML</p> <p>CSS</p> <p>Javascript</p> <p>Figma</p> <p>Unity</p>  
+            </div>
+        </div>
+        <div class ="soft-skills-wrapper">
+            <h2>Soft Skills:</h2>
+            <div class="soft-skills">
+                <p>Communication</p> <p>Adaptability</p> <p>Empathy</p> <p>Creativity</p> <p>Problem solving</p> <p>Knows a lot of cat facts</p>
+            </div>
+        </div>
+        
+      </div>
+      <div class="about-txt">
+        <h2>About Me</h2>
+        <p>Hey there! I'm Trina, a computer science student deeply passionate about <strong class="highlight">design</strong> and <strong class="highlight">development</strong>. My focus? <strong class="highlight">Empathy</strong> and <strong class="highlight">user-centricity</strong>. In the world of algorithms and programming languages, I aim to craft solutions that seamlessly blend technology with a human touch. Currently on the lookout for a <strong class = "highlight">co-op position or internship</strong>, I'm eager to bring my skills to the table and create meaningful digital experiences. Let's connect and innovate together!</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="projects" id="projects">
+    <div class="scroll-wrapper">
+      <h1>FEATURED PROJECT</h1>
+    </div>
+    <div class="sundae"> 
+
+      <img class="preview" src="imgs/sundae.png" alt="Sundae App">
+      
+      <div class = "preview-txt" onclick="openSundaePage()">
+        <h3>Sundae</h3>
+        <h4>Redefining the task mangement experience</h4>
+        <h6>APPLICATION DESIGN</h6>
+      </div>
+
+    </div>
+  </section>
+  <!-- Link to external JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
